@@ -107,6 +107,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Inferback.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Inferback.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Inferback.Domain.dll": {}
+        }
       }
     }
   },
@@ -451,10 +461,16 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Inferback.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Inferback.Domain/Inferback.Domain.csproj",
+      "msbuildProject": "../Inferback.Domain/Inferback.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Inferback.Domain >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.3",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -483,7 +499,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/Inferback.Domain.csproj": {
+              "projectPath": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/Inferback.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

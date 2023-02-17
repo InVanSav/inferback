@@ -1,3 +1,4 @@
+using Inferback.Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace inferback.Controllers;

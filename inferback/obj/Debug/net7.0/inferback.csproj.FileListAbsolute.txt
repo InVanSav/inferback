@@ -31,3 +31,5 @@
 /home/savickiji_ivan/RiderProjects/inferback/inferback/obj/Debug/net7.0/inferback.pdb
 /home/savickiji_ivan/RiderProjects/inferback/inferback/obj/Debug/net7.0/inferback.genruntimeconfig.cache
 /home/savickiji_ivan/RiderProjects/inferback/inferback/obj/Debug/net7.0/ref/inferback.dll
+/home/savickiji_ivan/RiderProjects/inferback/inferback/bin/Debug/net7.0/Inferback.Domain.dll
+/home/savickiji_ivan/RiderProjects/inferback/inferback/bin/Debug/net7.0/Inferback.Domain.pdb
