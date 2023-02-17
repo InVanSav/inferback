@@ -1,4 +1,4 @@
-namespace inferback;
+namespace Inferback.Domain.Entity;
 
 public class WeatherForecast {
     public DateOnly Date { get; set; }

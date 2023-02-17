@@ -1,0 +1,12 @@
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/bin/Debug/net7.0/Inferback.Domain.deps.json
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/bin/Debug/net7.0/Inferback.Domain.dll
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/bin/Debug/net7.0/Inferback.Domain.pdb
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/obj/Debug/net7.0/Inferback.Domain.csproj.AssemblyReference.cache
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/obj/Debug/net7.0/Inferback.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/obj/Debug/net7.0/Inferback.Domain.AssemblyInfoInputs.cache
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/obj/Debug/net7.0/Inferback.Domain.AssemblyInfo.cs
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/obj/Debug/net7.0/Inferback.Domain.csproj.CoreCompileInputs.cache
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/obj/Debug/net7.0/Inferback.Domain.dll
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/obj/Debug/net7.0/refint/Inferback.Domain.dll
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/obj/Debug/net7.0/Inferback.Domain.pdb
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/obj/Debug/net7.0/ref/Inferback.Domain.dll
