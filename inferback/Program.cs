@@ -1,4 +1,6 @@
 using Inferback.DAL;
+using Inferback.DAL.Interfaces;
+using Inferback.DAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,9 @@ var connection = builder.Configuration.
 builder.Services.
     AddDbContext<ApplicationDbContext>(options => 
                                            options.UseSqlServer(connection));
+
+builder.Services.AddTransient<IProjectRepository, ProjectRepository>();
+builder.Services.AddTransient<IReportRepository, ReportRepository>();
 
 var app = builder.Build();
 
