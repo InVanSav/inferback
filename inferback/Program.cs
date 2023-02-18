@@ -1,6 +1,8 @@
 using Inferback.DAL;
 using Inferback.DAL.Interfaces;
 using Inferback.DAL.Repositories;
+using Inferback.Service.Implementations;
+using Inferback.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +19,9 @@ builder.Services.
 
 builder.Services.AddTransient<IProjectRepository, ProjectRepository>();
 builder.Services.AddTransient<IReportRepository, ReportRepository>();
+
+builder.Services.AddTransient<IProjectService, ProjectService>();
+builder.Services.AddTransient<IReportService, ReportService>();
 
 var app = builder.Build();
 

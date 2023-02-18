@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "1k8d25ialeV3f2WQx5bHEpst8Qgzow8nkiRcoE/YYUJKLjdHi/Tze/+fLergv8BPhMLK2H0vJVNUB7/g8aJurQ==",
+  "dgSpecHash": "RZE4+uvxDdtEq7cewnKT/kZ5FUIug1/td3uTVn2hsrgW7zqleKPXgJB75V9m63l/OQg5j+k0oUrDWoIfU5JGrA==",
   "success": true,
   "projectFilePath": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/Inferback.Service.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/savickiji_ivan/.nuget/packages/microsoft.entityframeworkcore/7.0.3/microsoft.entityframeworkcore.7.0.3.nupkg.sha512",
+    "/home/savickiji_ivan/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.3/microsoft.entityframeworkcore.abstractions.7.0.3.nupkg.sha512",
+    "/home/savickiji_ivan/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.3/microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512",
+    "/home/savickiji_ivan/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "/home/savickiji_ivan/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "/home/savickiji_ivan/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/home/savickiji_ivan/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/home/savickiji_ivan/.nuget/packages/microsoft.extensions.logging/7.0.0/microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "/home/savickiji_ivan/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "/home/savickiji_ivan/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "/home/savickiji_ivan/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

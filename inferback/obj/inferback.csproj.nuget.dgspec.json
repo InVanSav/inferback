@@ -4,6 +4,69 @@
     "/home/savickiji_ivan/RiderProjects/inferback/inferback/inferback.csproj": {}
   },
   "projects": {
+    "/home/savickiji_ivan/RiderProjects/inferback/Inferback.DAL/Inferback.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.DAL/Inferback.DAL.csproj",
+        "projectName": "Inferback.DAL",
+        "projectPath": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.DAL/Inferback.DAL.csproj",
+        "packagesPath": "/home/savickiji_ivan/.nuget/packages/",
+        "outputPath": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.DAL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/savickiji_ivan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/Inferback.Domain.csproj": {
+                "projectPath": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/Inferback.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/Inferback.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -57,6 +120,66 @@
         }
       }
     },
+    "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/Inferback.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/Inferback.Service.csproj",
+        "projectName": "Inferback.Service",
+        "projectPath": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/Inferback.Service.csproj",
+        "packagesPath": "/home/savickiji_ivan/.nuget/packages/",
+        "outputPath": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/savickiji_ivan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/savickiji_ivan/RiderProjects/inferback/Inferback.DAL/Inferback.DAL.csproj": {
+                "projectPath": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.DAL/Inferback.DAL.csproj"
+              },
+              "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/Inferback.Domain.csproj": {
+                "projectPath": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/Inferback.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/savickiji_ivan/RiderProjects/inferback/inferback/inferback.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -79,8 +202,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "/home/savickiji_ivan/RiderProjects/inferback/Inferback.DAL/Inferback.DAL.csproj": {
+                "projectPath": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.DAL/Inferback.DAL.csproj"
+              },
               "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/Inferback.Domain.csproj": {
                 "projectPath": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Domain/Inferback.Domain.csproj"
+              },
+              "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/Inferback.Service.csproj": {
+                "projectPath": "/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/Inferback.Service.csproj"
               }
             }
           }
@@ -96,6 +225,10 @@
           "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.3, )"
             },
