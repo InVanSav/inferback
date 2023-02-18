@@ -32,4 +32,11 @@ public class ReportRepository : IReportRepository {
 
         return true;
     }
+    
+    public async Task<Report> Update(Report entity) {
+        _db.Reports.Update(entity);
+        await _db.SaveChangesAsync();
+
+        return entity;
+    }
 }

@@ -2,11 +2,11 @@ using Inferback.DAL.Interfaces;
 using Inferback.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 
-namespace Inferback.DAL.Repositories; 
+namespace Inferback.DAL.Repositories;
 
 public class ProjectRepository : IProjectRepository {
     private readonly ApplicationDbContext _db;
-    
+
     public ProjectRepository(ApplicationDbContext db) {
         _db = db;
     }
@@ -15,7 +15,8 @@ public class ProjectRepository : IProjectRepository {
         await _db.Projects.AddAsync(entity);
         await _db.SaveChangesAsync();
 
-        return true;    }
+        return true;
+    }
 
     public async Task<Project> Get(int id) {
         return await _db.Projects.FirstOrDefaultAsync(x => x.id == id);
@@ -29,5 +30,14 @@ public class ProjectRepository : IProjectRepository {
         _db.Projects.Remove(entity);
         await _db.SaveChangesAsync();
 
-        return true;    }
+        return true;
+    }
+    
+    public async Task<Project> Update(Project entity) {
+        _db.Projects.Update(entity);
+        await _db.SaveChangesAsync();
+
+        return entity;
+    }
+
 }

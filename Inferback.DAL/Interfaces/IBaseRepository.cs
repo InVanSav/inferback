@@ -10,4 +10,6 @@ public interface IBaseRepository<T> {
     Task<List<T>> Select();
 
     public Task<bool> Delete(T entity);
+
+    public Task<T> Update(T entity);
 }
