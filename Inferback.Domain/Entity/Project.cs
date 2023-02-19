@@ -8,4 +8,6 @@ public class Project {
     public string? path { get; set; }
 
     public DateTime createdAt { get; set; } = DateTime.Now;
+    
+    public List<Report>? reports { get; set; }
 }

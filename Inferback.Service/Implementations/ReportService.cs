@@ -97,6 +97,8 @@ public class ReportService : IReportService {
                 name = entity.name,
                 bugsCount = entity.bugsCount,
                 createdAt = entity.createdAt,
+                projectId = entity.projectId,
+                project = entity.project,
             };
 
             if (report == null) {
@@ -134,6 +136,8 @@ public class ReportService : IReportService {
             report.name = entity.name;
             report.bugsCount = entity.bugsCount;
             report.createdAt = entity.createdAt;
+            report.projectId = entity.projectId;
+            report.project = entity.project;
 
             await _reportRepository.Update(report);
             return baseResponse;

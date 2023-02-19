@@ -1,10 +1,11 @@
+using System.Web.Http;
 using Inferback.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace inferback.Controllers.Project; 
 
 [ApiController]
-[Route("api/project/[controller]")]
+[Microsoft.AspNetCore.Mvc.Route("api/project/[controller]")]
 public class HttpPutProject : ControllerBase {
     private readonly IProjectService _projectService;
     
@@ -12,8 +13,8 @@ public class HttpPutProject : ControllerBase {
         _projectService = projectService;
     }
     
-    [HttpPut("edit-project/{id}")]
-    public async Task<IActionResult> EditProject(int id, Inferback.Domain.Entity.Project entity) {
+    [Microsoft.AspNetCore.Mvc.HttpPut("edit-project/{id}")]
+    public async Task<IActionResult> EditProject(int id, [FromUri] Inferback.Domain.Entity.Project entity) {
         if (id == null || entity == null) {
             return BadRequest("Request have to include entity");
         }

@@ -97,6 +97,7 @@ public class ProjectService : IProjectService {
                 name = entity.name,
                 path = entity.path,
                 createdAt = entity.createdAt,
+                reports = entity.reports,
             };
 
             if (project == null) {
@@ -134,6 +135,7 @@ public class ProjectService : IProjectService {
             project.name = entity.name;
             project.path = entity.path;
             project.createdAt = entity.createdAt;
+            project.reports = entity.reports;
 
             await _projectRepository.Update(project);
             return baseResponse;

@@ -1,10 +1,11 @@
+using System.Web.Http;
 using Inferback.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace inferback.Controllers.Project; 
 
 [ApiController]
-[Route("api/project/[controller]")]
+[Microsoft.AspNetCore.Mvc.Route("api/project/[controller]")]
 public class HttpPostProject : ControllerBase {
     private readonly IProjectService _projectService;
     
@@ -12,8 +13,8 @@ public class HttpPostProject : ControllerBase {
         _projectService = projectService;
     }
     
-    [HttpPost("create-project")]
-    public async Task<IActionResult> CreateReport(Inferback.Domain.Entity.Project entity) {
+    [Microsoft.AspNetCore.Mvc.HttpPost("create-project")]
+    public async Task<IActionResult> CreateReport([FromUri] Inferback.Domain.Entity.Project entity) {
         if (entity == null) {
             return BadRequest("Request have to include entity");
         }

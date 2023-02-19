@@ -1,10 +1,11 @@
+using System.Web.Http;
 using Inferback.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace inferback.Controllers.Report; 
 
 [ApiController]
-[Route("api/report/[controller]")]
+[Microsoft.AspNetCore.Mvc.Route("api/report/[controller]")]
 public class HttpPostReport : ControllerBase {
     private readonly IReportService _reportService;
     
@@ -12,8 +13,8 @@ public class HttpPostReport : ControllerBase {
         _reportService = reportService;
     }
     
-    [HttpPost("create-report")]
-    public async Task<IActionResult> CreateReport(Inferback.Domain.Entity.Report entity) {
+    [Microsoft.AspNetCore.Mvc.HttpPost("create-report")]
+    public async Task<IActionResult> CreateReport([FromUri] Inferback.Domain.Entity.Report entity) {
         if (entity == null) {
             return BadRequest("Request have to include entity");
         }
