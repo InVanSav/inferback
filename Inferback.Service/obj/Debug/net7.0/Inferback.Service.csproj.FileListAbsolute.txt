@@ -1,0 +1,17 @@
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/bin/Debug/net7.0/Inferback.Service.deps.json
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/bin/Debug/net7.0/Inferback.Service.dll
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/bin/Debug/net7.0/Inferback.Service.pdb
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/bin/Debug/net7.0/Inferback.DAL.dll
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/bin/Debug/net7.0/Inferback.Domain.dll
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/bin/Debug/net7.0/Inferback.DAL.pdb
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/bin/Debug/net7.0/Inferback.Domain.pdb
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/obj/Debug/net7.0/Inferback.Service.csproj.AssemblyReference.cache
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/obj/Debug/net7.0/Inferback.Service.GeneratedMSBuildEditorConfig.editorconfig
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/obj/Debug/net7.0/Inferback.Service.AssemblyInfoInputs.cache
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/obj/Debug/net7.0/Inferback.Service.AssemblyInfo.cs
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/obj/Debug/net7.0/Inferback.Service.csproj.CoreCompileInputs.cache
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/obj/Debug/net7.0/Inferback.Service.csproj.CopyComplete
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/obj/Debug/net7.0/Inferback.Service.dll
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/obj/Debug/net7.0/refint/Inferback.Service.dll
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/obj/Debug/net7.0/Inferback.Service.pdb
+/home/savickiji_ivan/RiderProjects/inferback/Inferback.Service/obj/Debug/net7.0/ref/Inferback.Service.dll

@@ -14,8 +14,12 @@ builder.Services.AddSwaggerGen();
 var connection = builder.Configuration.
     GetConnectionString("DefaultConnection");
 builder.Services.
-    AddDbContext<ApplicationDbContext>(options => 
-                                           options.UseSqlServer(connection));
+    AddDbContext<ApplicationDbContext>
+        (options => options.UseMySql(
+                                     connection,
+                                     new MariaDbServerVersion(new Version(10, 9, 5))
+                                    )
+        );
 
 builder.Services.AddTransient<IProjectRepository, ProjectRepository>();
 builder.Services.AddTransient<IReportRepository, ReportRepository>();

@@ -12,7 +12,7 @@ public class HttpPutProject : ControllerBase {
         _projectService = projectService;
     }
     
-    [HttpPut("edit-project/{id}/{entity}")]
+    [HttpPut("edit-project/{id}")]
     public async Task<IActionResult> EditProject(int id, Inferback.Domain.Entity.Project entity) {
         if (id == null || entity == null) {
             return BadRequest("Request have to include entity");

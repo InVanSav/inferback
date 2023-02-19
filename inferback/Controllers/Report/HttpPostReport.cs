@@ -12,7 +12,7 @@ public class HttpPostReport : ControllerBase {
         _reportService = reportService;
     }
     
-    [HttpPost("create-report/{entity}")]
+    [HttpPost("create-report")]
     public async Task<IActionResult> CreateReport(Inferback.Domain.Entity.Report entity) {
         if (entity == null) {
             return BadRequest("Request have to include entity");

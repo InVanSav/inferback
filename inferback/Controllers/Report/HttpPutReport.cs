@@ -12,7 +12,7 @@ public class HttpPutReport : ControllerBase {
         _reportService = reportService;
     }
     
-    [HttpPut("edit-report/{id}/{entity}")]
+    [HttpPut("edit-report/{id}")]
     public async Task<IActionResult> EditReport(int id, Inferback.Domain.Entity.Report entity) {
         if (id == null || entity == null) {
             return BadRequest("Request have to include entity");

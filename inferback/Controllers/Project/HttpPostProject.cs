@@ -12,7 +12,7 @@ public class HttpPostProject : ControllerBase {
         _projectService = projectService;
     }
     
-    [HttpPost("create-project/{entity}")]
+    [HttpPost("create-project")]
     public async Task<IActionResult> CreateReport(Inferback.Domain.Entity.Project entity) {
         if (entity == null) {
             return BadRequest("Request have to include entity");
