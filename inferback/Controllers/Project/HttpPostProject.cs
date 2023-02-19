@@ -1,20 +1,20 @@
-using System.Web.Http;
+using Inferback.Domain.ViewEntities;
 using Inferback.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace inferback.Controllers.Project; 
+namespace inferback.Controllers.Project;
 
 [ApiController]
-[Microsoft.AspNetCore.Mvc.Route("api/project/[controller]")]
+[Route("api/project/[controller]")]
 public class HttpPostProject : ControllerBase {
     private readonly IProjectService _projectService;
-    
+
     public HttpPostProject(IProjectService projectService) {
         _projectService = projectService;
     }
-    
-    [Microsoft.AspNetCore.Mvc.HttpPost("create-project")]
-    public async Task<IActionResult> CreateReport([FromUri] Inferback.Domain.Entity.Project entity) {
+
+    [HttpPost("create-project")]
+    public async Task<IActionResult> CreateReport([FromBody] ProjectView entity) {
         if (entity == null) {
             return BadRequest("Request have to include entity");
         }

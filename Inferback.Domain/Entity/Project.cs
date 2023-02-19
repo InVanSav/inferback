@@ -9,5 +9,5 @@ public class Project {
 
     public DateTime createdAt { get; set; } = DateTime.Now;
     
-    public List<Report>? reports { get; set; }
+    public List<Report> reports { get; set; }
 }

@@ -2,6 +2,7 @@ using Inferback.DAL.Interfaces;
 using Inferback.Domain.Entity;
 using Inferback.Domain.Enum;
 using Inferback.Domain.Response;
+using Inferback.Domain.ViewEntities;
 using Inferback.Service.Interfaces;
 
 namespace Inferback.Service.Implementations;
@@ -88,17 +89,14 @@ public class ReportService : IReportService {
         }
     }
     
-    public async Task<IBaseResponse<Report>> CreateReport(Report entity) {
+    public async Task<IBaseResponse<Report>> CreateReport(ReportView entity) {
         var baseResponse = new BaseResponse<Report>();
 
         try {
             var report = new Report() {
-                id = entity.id,
                 name = entity.name,
                 bugsCount = entity.bugsCount,
-                createdAt = entity.createdAt,
                 projectId = entity.projectId,
-                project = entity.project,
             };
 
             if (report == null) {
@@ -120,11 +118,11 @@ public class ReportService : IReportService {
         }
     }
     
-    public async Task<IBaseResponse<Report>> UpdateReport(int id, Report entity) {
+    public async Task<IBaseResponse<Report>> UpdateReport(ReportView entity) {
         var baseResponse = new BaseResponse<Report>();
 
         try {
-            var report = await _reportRepository.Get(id);
+            var report = await _reportRepository.Get(entity.id);
 
             if (report == null) {
                 baseResponse.StatusCode = StatusCode.DataNotFound;
@@ -132,12 +130,9 @@ public class ReportService : IReportService {
                 return baseResponse;
             }
 
-            report.id = entity.id;
             report.name = entity.name;
             report.bugsCount = entity.bugsCount;
-            report.createdAt = entity.createdAt;
             report.projectId = entity.projectId;
-            report.project = entity.project;
 
             await _reportRepository.Update(report);
             return baseResponse;

@@ -1,5 +1,6 @@
 using Inferback.Domain.Entity;
 using Inferback.Domain.Response;
+using Inferback.Domain.ViewEntities;
 
 namespace Inferback.Service.Interfaces; 
 
@@ -10,7 +11,7 @@ public interface IReportService {
 
     Task<IBaseResponse<bool>> DeleteReport(int id);
 
-    Task<IBaseResponse<Report>> CreateReport(Report entity);
-    
-    Task<IBaseResponse<Report>> UpdateReport(int id, Report entity);
+    Task<IBaseResponse<Report>> CreateReport(ReportView entity);
+
+    Task<IBaseResponse<Report>> UpdateReport(ReportView entity);
 }
