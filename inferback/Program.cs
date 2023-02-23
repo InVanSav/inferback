@@ -1,8 +1,8 @@
-using Inferback.DAL;
-using Inferback.DAL.Interfaces;
-using Inferback.DAL.Repositories;
-using Inferback.Service.Implementations;
-using Inferback.Service.Interfaces;
+using inferback.DAL;
+using inferback.DAL.Interfaces;
+using inferback.DAL.Repositories;
+using inferback.Service.Implementations;
+using inferback.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,4 +1,4 @@
-using Inferback.Service.Interfaces;
+using inferback.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace inferback.Controllers.Project; 
@@ -14,13 +14,13 @@ public class HttpDeleteProject : ControllerBase {
     
     [HttpDelete("delete-project/{id}")]
     public async Task<IActionResult> DeleteProject(int id) {
-        if (id == null) {
+        if (id == 0) {
             return BadRequest("Request have to include id");
         }
 
         var response = await _projectService.DeleteProject(id);
 
-        if (response.StatusCode == Inferback.Domain.Enum.StatusCode.OK) {
+        if (response.StatusCode == Domain.Enum.StatusCode.OK) {
             return Ok("Object 'project' delete successfully");
         }
 

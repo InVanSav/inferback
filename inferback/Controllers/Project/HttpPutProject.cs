@@ -1,5 +1,5 @@
-using Inferback.Domain.ViewEntities;
-using Inferback.Service.Interfaces;
+using inferback.Domain.ViewEntities;
+using inferback.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace inferback.Controllers.Project; 
@@ -14,14 +14,14 @@ public class HttpPutProject : ControllerBase {
     }
     
     [HttpPut("edit-project")]
-    public async Task<IActionResult> EditProject([FromBody] ProjectView entity) {
+    public async Task<IActionResult> EditProject(int id, [FromBody] ProjectView entity) {
         if (entity == null) {
             return BadRequest("Request have to include entity");
         }
 
-        var response = await _projectService.UpdateProject(entity);
+        var response = await _projectService.UpdateProject(id, entity);
 
-        if (response.StatusCode == Inferback.Domain.Enum.StatusCode.OK) {
+        if (response.StatusCode == Domain.Enum.StatusCode.OK) {
             return Ok("Object 'Project' edited successfully");
         }
 

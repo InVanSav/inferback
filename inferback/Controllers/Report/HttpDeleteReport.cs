@@ -1,4 +1,4 @@
-using Inferback.Service.Interfaces;
+using inferback.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace inferback.Controllers.Report; 
@@ -14,13 +14,13 @@ public class HttpDeleteReport : ControllerBase {
     
     [HttpDelete("delete-report/{id}")]
     public async Task<IActionResult> DeleteReport(int id) {
-        if (id == null) {
+        if (id == 0) {
             return BadRequest("Request have to include id");
         }
 
         var response = await _reportService.DeleteReport(id);
 
-        if (response.StatusCode == Inferback.Domain.Enum.StatusCode.OK) {
+        if (response.StatusCode == Domain.Enum.StatusCode.OK) {
             return Ok("Object 'report' delete successfully");
         }
 

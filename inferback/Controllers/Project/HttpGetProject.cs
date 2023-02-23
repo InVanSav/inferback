@@ -1,4 +1,4 @@
-using Inferback.Service.Interfaces;
+using inferback.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace inferback.Controllers.Project; 
@@ -20,7 +20,7 @@ public class HttpGetProject : ControllerBase {
             return BadRequest("Nothing to found");
         }
 
-        if (response.StatusCode == Inferback.Domain.Enum.StatusCode.OK) {
+        if (response.StatusCode == Domain.Enum.StatusCode.OK) {
             return Ok(response.Data);
         }
 
@@ -35,7 +35,7 @@ public class HttpGetProject : ControllerBase {
             return BadRequest("Nothing to found");
         }
 
-        if (response.StatusCode == Inferback.Domain.Enum.StatusCode.OK) {
+        if (response.StatusCode == Domain.Enum.StatusCode.OK) {
             return Ok(response.Data);
         }
 

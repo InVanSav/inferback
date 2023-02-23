@@ -1,5 +1,5 @@
-using Inferback.Domain.ViewEntities;
-using Inferback.Service.Interfaces;
+using inferback.Domain.ViewEntities;
+using inferback.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace inferback.Controllers.Report; 
@@ -21,7 +21,7 @@ public class HttpPostReport : ControllerBase {
 
         var response = await _reportService.CreateReport(entity);
 
-        if (response.StatusCode == Inferback.Domain.Enum.StatusCode.OK) {
+        if (response.StatusCode == Domain.Enum.StatusCode.OK) {
             return Ok(response.Data);
         }
 
