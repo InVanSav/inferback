@@ -117,11 +117,11 @@ public class ProjectService : IProjectService {
         }
     }
     
-    public async Task<IBaseResponse<Project>> UpdateProject(int id, ProjectView entity) {
+    public async Task<IBaseResponse<Project>> UpdateProject(ProjectView entity) {
         var baseResponse = new BaseResponse<Project>();
 
         try {
-            var project = await _projectRepository.Get(id);
+            var project = await _projectRepository.Get(entity.id);
 
             if (project == null) {
                 baseResponse.StatusCode = StatusCode.DataNotFound;
@@ -129,7 +129,6 @@ public class ProjectService : IProjectService {
                 return baseResponse;
             }
 
-            project.id = entity.id;
             project.name = entity.name;
             project.path = entity.path;
 

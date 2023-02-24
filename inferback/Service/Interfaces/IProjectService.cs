@@ -13,5 +13,5 @@ public interface IProjectService {
 
     Task<IBaseResponse<Project>> CreateProject(ProjectView entity);
 
-    Task<IBaseResponse<Project>> UpdateProject(int id, ProjectView entity);
+    Task<IBaseResponse<Project>> UpdateProject(ProjectView entity);
 }

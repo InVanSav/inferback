@@ -118,11 +118,11 @@ public class ReportService : IReportService {
         }
     }
     
-    public async Task<IBaseResponse<Report>> UpdateReport(int id, ReportView entity) {
+    public async Task<IBaseResponse<Report>> UpdateReport(ReportView entity) {
         var baseResponse = new BaseResponse<Report>();
 
         try {
-            var report = await _reportRepository.Get(id);
+            var report = await _reportRepository.Get(entity.id);
 
             if (report == null) {
                 baseResponse.StatusCode = StatusCode.DataNotFound;
@@ -130,7 +130,6 @@ public class ReportService : IReportService {
                 return baseResponse;
             }
 
-            report.id = entity.id;
             report.name = entity.name;
             report.bugsCount = entity.bugsCount;
             report.projectId = entity.projectId;

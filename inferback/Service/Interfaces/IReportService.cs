@@ -13,5 +13,5 @@ public interface IReportService {
 
     Task<IBaseResponse<Report>> CreateReport(ReportView entity);
 
-    Task<IBaseResponse<Report>> UpdateReport(int id, ReportView entity);
+    Task<IBaseResponse<Report>> UpdateReport(ReportView entity);
 }

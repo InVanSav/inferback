@@ -14,12 +14,12 @@ public class HttpPutProject : ControllerBase {
     }
     
     [HttpPut("edit-project")]
-    public async Task<IActionResult> EditProject(int id, [FromBody] ProjectView entity) {
+    public async Task<IActionResult> EditProject([FromBody] ProjectView entity) {
         if (entity == null) {
             return BadRequest("Request have to include entity");
         }
 
-        var response = await _projectService.UpdateProject(id, entity);
+        var response = await _projectService.UpdateProject(entity);
 
         if (response.StatusCode == Domain.Enum.StatusCode.OK) {
             return Ok("Object 'Project' edited successfully");

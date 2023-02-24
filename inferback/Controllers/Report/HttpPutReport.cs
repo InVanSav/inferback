@@ -14,12 +14,12 @@ public class HttpPutReport : ControllerBase {
     }
     
     [HttpPut("edit-report")]
-    public async Task<IActionResult> EditReport(int id, [FromBody] ReportView entity) {
+    public async Task<IActionResult> EditReport([FromBody] ReportView entity) {
         if (entity == null) {
             return BadRequest("Request have to include entity");
         }
 
-        var response = await _reportService.UpdateReport(id, entity);
+        var response = await _reportService.UpdateReport(entity);
 
         if (response.StatusCode == Domain.Enum.StatusCode.OK) {
             return Ok("Object 'Report' edited successfully");
