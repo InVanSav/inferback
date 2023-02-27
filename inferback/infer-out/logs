@@ -1,0 +1,98 @@
+[81079][      debug] Loading models took 634ms
+[81083][      debug] Sqlite write daemon: starting up
+[81083][      debug] Sqlite write daemon: set up complete, waiting for connections
+[81079][environment] CWD = /home/savickij_ivan/RiderProjects/inferback/inferback
+[81079][environment] No .inferconfig file found
+[81079][environment] Project root = /home/savickij_ivan/RiderProjects/inferback/inferback
+[81079][environment] INFER_ARGS =   
+[81079][environment] command line arguments:   infer-run -- javac
+[81079][environment]                           /home/savickij_ivan/Projects/java/infer2.java
+[81079][environment] Available memory at startup: 1631 MB
+[81079][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[81079][environment] Scheduler: file
+[81079][environment] Cores used: 2
+[81079][environment] Infer version v1.1.0-unknown
+[81079][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[81079][environment] 
+[81079][   progress] Capturing in javac mode...
+[81079][      debug] Current working directory: '/home/savickij_ivan/RiderProjects/inferback/inferback'
+[81079][      debug] Trying to execute: javac '-J-Duser.language=en' '@/home/savickij_ivan/RiderProjects/inferback/inferback/infer-out/tmp/javac_args.tmp.e25da5' 2>'/home/savickij_ivan/RiderProjects/inferback/inferback/infer-out/tmp/javac.tmp.d327db.out'
+[81079][      debug] *** Success. Logs:
+[81079][      debug] Translating 1 source files (0 classes)
+[81079][      debug] done capturing all files
+[81079][      debug] GC stats for capture:
+[81079][      debug]   minor_words: 1.57304e+06
+[81079][      debug]   promoted_words: 363142
+[81079][      debug]   major_words: 378202
+[81079][      debug]   minor_collections: 2
+[81079][      debug]   major_collections: 0
+[81079][      debug]   compactions: 0
+[81079][      debug]   top_heap_words: 1157632
+[81079][      debug]   
+[81079][environment] Parallel jobs: 2
+[81079][   progress] Found 1 source file to analyze in /home/savickij_ivan/RiderProjects/inferback/inferback/infer-out
+[81110][   progress] /home/savickij_ivan/Projects/java/infer2.java starting
+[81110][   progress] /home/savickij_ivan/Projects/java/infer2.java DONE
+[81079][      debug] Backend stats:
+[81079][      debug]   summary_file_try_load= 0
+[81079][      debug]   summary_read_from_disk= 0
+[81079][      debug]   summary_cache_hits= 0 (N/A%%)
+[81079][      debug]   summary_cache_misses= 0
+[81079][      debug]   ondemand_procs_analyzed= 0
+[81079][      debug]   ondemand_local_cache_hits= 0 (N/A%%)
+[81079][      debug]   ondemand_local_cache_misses= 0
+[81079][      debug]   proc_locker_lock_time_user= 0.00000000
+[81079][      debug]   proc_locker_lock_time_sys= 0.00000000
+[81079][      debug]   proc_locker_lock_time_wall= 0.00000000
+[81079][      debug]   proc_locker_unlock_time_user= 0.00000000
+[81079][      debug]   proc_locker_unlock_time_sys= 0.00000000
+[81079][      debug]   proc_locker_unlock_time_wall= 0.00000000
+[81079][      debug]   restart_scheduler_useful_time_user= 0.00000000
+[81079][      debug]   restart_scheduler_useful_time_sys= 0.00000000
+[81079][      debug]   restart_scheduler_useful_time_wall= 0.00000000
+[81079][      debug]   restart_scheduler_total_time_user= 0.00000000
+[81079][      debug]   restart_scheduler_total_time_sys= 0.00000000
+[81079][      debug]   restart_scheduler_total_time_wall= 0.00000000
+[81079][      debug]   
+[81079][      debug] GC stats for backend_stats.gc_stats_add.:
+[81079][      debug]   minor_words: 574
+[81079][      debug]   promoted_words: 0
+[81079][      debug]   major_words: 0
+[81079][      debug]   minor_collections: 0
+[81079][      debug]   major_collections: 0
+[81079][      debug]   compactions: 0
+[81079][      debug]   top_heap_words: 2315264
+[81079][      debug]   
+[81079][      debug] GC stats for backend_stats.gc_stats_max.:
+[81079][      debug]   minor_words: 512
+[81079][      debug]   promoted_words: 0
+[81079][      debug]   major_words: 0
+[81079][      debug]   minor_collections: 0
+[81079][      debug]   major_collections: 0
+[81079][      debug]   compactions: 0
+[81079][      debug]   top_heap_words: 1157632
+[81079][      debug]   
+[81079][      debug] Average over 2 processes
+[81079][      debug] GC stats for backend_stats.gc_stats_average.:
+[81079][      debug]   minor_words: 287
+[81079][      debug]   promoted_words: 0
+[81079][      debug]   major_words: 0
+[81079][      debug]   minor_collections: 0
+[81079][      debug]   major_collections: 0
+[81079][      debug]   compactions: 0
+[81079][      debug]   top_heap_words: 1157632
+[81079][      debug]   
+[81079][      debug] Analysis phase finished in 71.415ms
+[81079][      debug] backend_stats.scheduler_process_analysis_time_user= 0.01852100
+[81079][      debug] backend_stats.scheduler_process_analysis_time_sys= 0.01895000
+[81079][      debug] backend_stats.scheduler_process_analysis_time_wall= 0.07141529
+[81079][      debug] GC stats for analysis_scheduler:
+[81079][      debug]   minor_words: 78025
+[81079][      debug]   promoted_words: 42936
+[81079][      debug]   major_words: 51642
+[81079][      debug]   minor_collections: 1
+[81079][      debug]   major_collections: 2
+[81079][      debug]   compactions: 1
+[81079][      debug]   top_heap_words: 1157632
+[81079][      debug]   
+[81083][      debug] Sqlite write daemon: terminating

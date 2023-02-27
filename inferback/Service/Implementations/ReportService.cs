@@ -1,17 +1,24 @@
+using System.Diagnostics;
 using inferback.DAL.Interfaces;
+using inferback.Domain.Config;
 using inferback.Domain.Entity;
 using inferback.Domain.Enum;
 using inferback.Domain.Response;
 using inferback.Domain.ViewEntities;
 using inferback.Service.Interfaces;
+using InferTest;
+using Newtonsoft.Json;
 
 namespace inferback.Service.Implementations;
 
 public class ReportService : IReportService {
     private readonly IReportRepository _reportRepository;
+    private readonly IDescriptionRepository _descriptionRepository;
 
-    public ReportService(IReportRepository reportRepository) {
+    public ReportService(IReportRepository reportRepository, 
+        IDescriptionRepository descriptionRepository) {
         _reportRepository = reportRepository;
+        _descriptionRepository = descriptionRepository;
     }
 
     public async Task<IBaseResponse<Report>> GetReport(int id) {
@@ -34,7 +41,7 @@ public class ReportService : IReportService {
         catch (Exception ex) {
             return new BaseResponse<Report>() {
                 Result = $"[GetReport] : {ex.Message}",
-                StatusCode = StatusCode.InternalServerError,
+                StatusCode = StatusCode.InternalServerError
             };
         }
     }
@@ -59,11 +66,36 @@ public class ReportService : IReportService {
         catch (Exception ex) {
             return new BaseResponse<IEnumerable<Report>>() {
                 Result = $"[GetReports] : {ex.Message}",
-                StatusCode = StatusCode.InternalServerError,
+                StatusCode = StatusCode.InternalServerError
             };
         }
     }
-    
+
+    public async Task<IBaseResponse<IEnumerable<Report>>> GetReportsOfProject(int id) {
+        var baseResponse = new BaseResponse<IEnumerable<Report>>();
+
+        try {
+            var reports = await _reportRepository.SelectReportsOfProject(id);
+
+            if (reports == null) {
+                baseResponse.Result = "Get reports of project. Reports did not found";
+                baseResponse.StatusCode = StatusCode.DataNotFound;
+                return baseResponse;
+            }
+
+            baseResponse.Data = reports;
+            baseResponse.StatusCode = StatusCode.OK;
+
+            return baseResponse;
+        }
+        catch (Exception ex) {
+            return new BaseResponse<IEnumerable<Report>>() {
+                Result = $"[GetReportsOfProject] : {ex.Message}",
+                StatusCode = StatusCode.InternalServerError
+            };
+        }
+    }
+
     public async Task<IBaseResponse<bool>> DeleteReport(int id) {
         var baseResponse = new BaseResponse<bool>();
 
@@ -80,22 +112,21 @@ public class ReportService : IReportService {
             baseResponse.StatusCode = StatusCode.OK;
 
             return baseResponse;
-
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             return new BaseResponse<bool>() {
                 Result = $"[DeleteReport] : {ex.Message}",
-                StatusCode = StatusCode.InternalServerError,
+                StatusCode = StatusCode.InternalServerError
             };
         }
     }
-    
+
     public async Task<IBaseResponse<Report>> CreateReport(ReportView entity) {
         var baseResponse = new BaseResponse<Report>();
 
         try {
             var report = new Report() {
                 name = entity.name,
-                bugsCount = entity.bugsCount,
                 projectId = entity.projectId,
             };
 
@@ -109,15 +140,15 @@ public class ReportService : IReportService {
             baseResponse.StatusCode = StatusCode.OK;
 
             return baseResponse;
-
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             return new BaseResponse<Report>() {
                 Result = $"[CreateReport] : {ex.Message}",
-                StatusCode = StatusCode.InternalServerError,
+                StatusCode = StatusCode.InternalServerError
             };
         }
     }
-    
+
     public async Task<IBaseResponse<Report>> UpdateReport(ReportView entity) {
         var baseResponse = new BaseResponse<Report>();
 
@@ -131,18 +162,16 @@ public class ReportService : IReportService {
             }
 
             report.name = entity.name;
-            report.bugsCount = entity.bugsCount;
-            report.projectId = entity.projectId;
 
             await _reportRepository.Update(report);
 
             baseResponse.StatusCode = StatusCode.OK;
             return baseResponse;
-
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             return new BaseResponse<Report>() {
                 Result = $"[UpdateReport] : {ex.Message}",
-                StatusCode = StatusCode.InternalServerError,
+                StatusCode = StatusCode.InternalServerError
             };
         }
     }

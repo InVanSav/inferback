@@ -11,21 +11,22 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var connection = builder.Configuration.
-    GetConnectionString("DefaultConnection");
-builder.Services.
-    AddDbContext<ApplicationDbContext>
-        (options => options.UseMySql(
-                                     connection,
-                                     new MariaDbServerVersion(new Version(10, 9, 5))
-                                    )
-        );
+var connection = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<ApplicationDbContext>
+(options => options.UseMySql(
+        connection,
+        new MariaDbServerVersion(new Version(10, 9, 5))
+    )
+);
 
 builder.Services.AddTransient<IProjectRepository, ProjectRepository>();
 builder.Services.AddTransient<IReportRepository, ReportRepository>();
+builder.Services.AddTransient<IDescriptionRepository, DescriptionRepository>();
 
 builder.Services.AddTransient<IProjectService, ProjectService>();
 builder.Services.AddTransient<IReportService, ReportService>();
+builder.Services.AddTransient<IDescriptionService, DescriptionService>();
 
 var app = builder.Build();
 

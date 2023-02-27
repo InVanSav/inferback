@@ -15,15 +15,11 @@ public class HttpPostProject : ControllerBase {
 
     [HttpPost("create-project")]
     public async Task<IActionResult> CreateReport([FromBody] ProjectView entity) {
-        if (entity == null) {
-            return BadRequest("Request have to include entity");
-        }
+        if (entity == null) return BadRequest("Request have to include entity");
 
         var response = await _projectService.CreateProject(entity);
 
-        if (response.StatusCode == Domain.Enum.StatusCode.OK) {
-            return Ok(response.Data);
-        }
+        if (response.StatusCode == Domain.Enum.StatusCode.OK) return Ok(response.Data);
 
         return NoContent();
     }

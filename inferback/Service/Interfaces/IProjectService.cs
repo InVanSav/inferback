@@ -2,7 +2,7 @@ using inferback.Domain.Entity;
 using inferback.Domain.Response;
 using inferback.Domain.ViewEntities;
 
-namespace inferback.Service.Interfaces; 
+namespace inferback.Service.Interfaces;
 
 public interface IProjectService {
     Task<IBaseResponse<IEnumerable<Project>>> GetProjects();

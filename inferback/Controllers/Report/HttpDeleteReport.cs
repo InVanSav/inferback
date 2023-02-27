@@ -1,7 +1,7 @@
 using inferback.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace inferback.Controllers.Report; 
+namespace inferback.Controllers.Report;
 
 [ApiController]
 [Route("api/report/[controller]")]
@@ -11,20 +11,15 @@ public class HttpDeleteReport : ControllerBase {
     public HttpDeleteReport(IReportService reportService) {
         _reportService = reportService;
     }
-    
+
     [HttpDelete("delete-report/{id}")]
     public async Task<IActionResult> DeleteReport(int id) {
-        if (id == 0) {
-            return BadRequest("Request have to include id");
-        }
+        if (id == 0) return BadRequest("Request have to include id");
 
         var response = await _reportService.DeleteReport(id);
 
-        if (response.StatusCode == Domain.Enum.StatusCode.OK) {
-            return Ok("Object 'report' delete successfully");
-        }
+        if (response.StatusCode == Domain.Enum.StatusCode.OK) return Ok("Object 'report' delete successfully");
 
         return BadRequest("Object 'report' did not delete");
-
     }
 }

@@ -9,7 +9,7 @@ namespace inferback.Service.Implementations;
 
 public class ProjectService : IProjectService {
     private readonly IProjectRepository _projectRepository;
-    
+
     public ProjectService(IProjectRepository projectRepository) {
         _projectRepository = projectRepository;
     }
@@ -19,7 +19,7 @@ public class ProjectService : IProjectService {
 
         try {
             var project = await _projectRepository.Get(id);
-            
+
             if (project == null) {
                 baseResponse.Result = "Get project. Project did not found";
                 baseResponse.StatusCode = StatusCode.DataNotFound;
@@ -30,11 +30,11 @@ public class ProjectService : IProjectService {
             baseResponse.StatusCode = StatusCode.OK;
 
             return baseResponse;
-
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             return new BaseResponse<Project>() {
                 Result = $"[GetProject] : {ex.Message}",
-                StatusCode = StatusCode.InternalServerError,
+                StatusCode = StatusCode.InternalServerError
             };
         }
     }
@@ -53,13 +53,13 @@ public class ProjectService : IProjectService {
 
             baseResponse.Data = projects;
             baseResponse.StatusCode = StatusCode.OK;
-            
+
             return baseResponse;
-            
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             return new BaseResponse<IEnumerable<Project>>() {
                 Result = $"[GetProjects] : {ex.Message}",
-                StatusCode = StatusCode.InternalServerError,
+                StatusCode = StatusCode.InternalServerError
             };
         }
     }
@@ -80,22 +80,22 @@ public class ProjectService : IProjectService {
             baseResponse.StatusCode = StatusCode.OK;
 
             return baseResponse;
-
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             return new BaseResponse<bool>() {
                 Result = $"[DeleteProject] : {ex.Message}",
-                StatusCode = StatusCode.InternalServerError,
+                StatusCode = StatusCode.InternalServerError
             };
         }
     }
-    
+
     public async Task<IBaseResponse<Project>> CreateProject(ProjectView entity) {
         var baseResponse = new BaseResponse<Project>();
 
         try {
             var project = new Project() {
                 name = entity.name,
-                path = entity.path,
+                path = entity.path
             };
 
             if (project == null) {
@@ -108,15 +108,15 @@ public class ProjectService : IProjectService {
             baseResponse.StatusCode = StatusCode.OK;
 
             return baseResponse;
-
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             return new BaseResponse<Project>() {
                 Result = $"[CreateProject] : {ex.Message}",
-                StatusCode = StatusCode.InternalServerError,
+                StatusCode = StatusCode.InternalServerError
             };
         }
     }
-    
+
     public async Task<IBaseResponse<Project>> UpdateProject(ProjectView entity) {
         var baseResponse = new BaseResponse<Project>();
 
@@ -136,11 +136,11 @@ public class ProjectService : IProjectService {
 
             baseResponse.StatusCode = StatusCode.OK;
             return baseResponse;
-
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             return new BaseResponse<Project>() {
                 Result = $"[UpdateProject] : {ex.Message}",
-                StatusCode = StatusCode.InternalServerError,
+                StatusCode = StatusCode.InternalServerError
             };
         }
     }
