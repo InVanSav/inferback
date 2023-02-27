@@ -5,5 +5,5 @@ public enum StatusCode {
     PageNoFound = 404,
     InternalServerError = 500,
     DataNotFound = 0,
-    DataDidNotAdd = 1,
+    DataDidNotAdd = 1
 }

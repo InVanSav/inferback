@@ -6,7 +6,7 @@ public class BaseResponse<T> : IBaseResponse<T> {
     public string Result { get; set; } = string.Empty;
 
     public StatusCode StatusCode { get; set; }
-    
+
     public T? Data { get; set; }
 }
 
