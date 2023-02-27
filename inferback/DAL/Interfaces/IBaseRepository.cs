@@ -1,4 +1,4 @@
-namespace inferback.DAL.Interfaces; 
+namespace inferback.DAL.Interfaces;
 
 public interface IBaseRepository<T> {
     public Task<bool> Create(T entity);

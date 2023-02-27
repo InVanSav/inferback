@@ -32,12 +32,11 @@ public class ProjectRepository : IProjectRepository {
 
         return true;
     }
-    
+
     public async Task<Project> Update(Project entity) {
         _db.Projects.Update(entity);
         await _db.SaveChangesAsync();
 
         return entity;
     }
-
 }
