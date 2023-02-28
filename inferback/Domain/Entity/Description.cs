@@ -4,6 +4,8 @@ namespace inferback.Domain.Entity;
 
 public class Description {
     public int id { get; set; }
+    
+    public string? name { get; set; }
 
     [JsonPropertyName("bug_type")] public string bug_type { get; set; }
 

@@ -1,24 +1,17 @@
-using System.Diagnostics;
 using inferback.DAL.Interfaces;
-using inferback.Domain.Config;
 using inferback.Domain.Entity;
 using inferback.Domain.Enum;
 using inferback.Domain.Response;
 using inferback.Domain.ViewEntities;
 using inferback.Service.Interfaces;
-using InferTest;
-using Newtonsoft.Json;
 
 namespace inferback.Service.Implementations;
 
 public class ReportService : IReportService {
     private readonly IReportRepository _reportRepository;
-    private readonly IDescriptionRepository _descriptionRepository;
 
-    public ReportService(IReportRepository reportRepository, 
-        IDescriptionRepository descriptionRepository) {
+    public ReportService(IReportRepository reportRepository) {
         _reportRepository = reportRepository;
-        _descriptionRepository = descriptionRepository;
     }
 
     public async Task<IBaseResponse<Report>> GetReport(int id) {
@@ -52,7 +45,7 @@ public class ReportService : IReportService {
         try {
             var reports = await _reportRepository.Select();
 
-            if (reports == null) {
+            if (reports.Count == 0) {
                 baseResponse.Result = "Get reports. Reports did not found";
                 baseResponse.StatusCode = StatusCode.DataNotFound;
                 return baseResponse;
@@ -77,7 +70,7 @@ public class ReportService : IReportService {
         try {
             var reports = await _reportRepository.SelectReportsOfProject(id);
 
-            if (reports == null) {
+            if (reports.Count == 0) {
                 baseResponse.Result = "Get reports of project. Reports did not found";
                 baseResponse.StatusCode = StatusCode.DataNotFound;
                 return baseResponse;
@@ -127,6 +120,7 @@ public class ReportService : IReportService {
         try {
             var report = new Report() {
                 name = entity.name,
+                path = entity.path,
                 projectId = entity.projectId,
             };
 

@@ -5,5 +5,7 @@ public class ReportView {
 
     public string? name { get; set; }
     
+    public string? path { get; set; }
+    
     public int projectId { get; set; }
 }

@@ -26,6 +26,20 @@ public class HttpGetDescription : ControllerBase {
         return NoContent();
     }
     
+    [HttpGet("get-descriptions-name-report_id/{id}/{name}")]
+    public async Task<IActionResult> GetDescriptionsByNameAndReportId(int id, string name) {
+        var descriptions = 
+            await _descriptionService.GetDescriptionsByNameAndReportId(name, id);
+
+        if (descriptions.Result == "Get descriptions by name and report id. Descriptions did not found") 
+            return BadRequest("Nothing to found");
+
+        if (descriptions.StatusCode == Domain.Enum.StatusCode.OK) 
+            return Ok(descriptions.Data);
+
+        return NoContent();
+    }
+    
     [HttpGet("get-descriptions")]
     public async Task<IActionResult> GetDescriptions() {
         var descriptions =

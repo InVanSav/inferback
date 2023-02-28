@@ -45,7 +45,7 @@ public class ProjectService : IProjectService {
         try {
             var projects = await _projectRepository.Select();
 
-            if (projects == null) {
+            if (projects.Count == 0) {
                 baseResponse.Result = "Get projects. Projects did not found";
                 baseResponse.StatusCode = StatusCode.DataNotFound;
                 return baseResponse;

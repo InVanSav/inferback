@@ -1,0 +1,21 @@
+#0
+/home/savickij_ivan/Projects/java/infer.java:4: error: Null Dereference
+  object `s` last assigned on line 3 could be null and is dereferenced at line 4.
+  2.     int test() {
+  3.       String s = null;
+  4. >     return s.length();
+  5.     }
+  6.   }
+
+#1
+/home/savickij_ivan/Projects/java/infer.java:11: error: Null Dereference
+  object `s` last assigned on line 10 could be null and is dereferenced at line 11.
+   9.     int test() {
+  10.       String s = null;
+  11. >     return s.length();
+  12.     }
+  13.   }
+
+Found 2 issues
+          Issue Type(ISSUED_TYPE_ID): #
+  Null Dereference(NULL_DEREFERENCE): 2

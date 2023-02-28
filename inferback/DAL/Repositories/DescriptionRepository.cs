@@ -29,6 +29,11 @@ public class DescriptionRepository : IDescriptionRepository {
     public async Task<List<Description>> SelectDescriptionsOfReport(int id) {
         return await _db.Descriptions.Where(x => x.reportId == id).ToListAsync();
     }
+    
+    public async Task<List<Description>> SelectByNameAndReportId(string name, int reportId) {
+        return await _db.Descriptions.Where
+            (x => x.name == name && x.reportId == reportId).ToListAsync();
+    }
 
     public async Task<bool> Delete(Description entity) {
         _db.Descriptions.Remove(entity);

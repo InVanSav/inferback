@@ -1,98 +1,185 @@
-[81079][      debug] Loading models took 634ms
-[81083][      debug] Sqlite write daemon: starting up
-[81083][      debug] Sqlite write daemon: set up complete, waiting for connections
-[81079][environment] CWD = /home/savickij_ivan/RiderProjects/inferback/inferback
-[81079][environment] No .inferconfig file found
-[81079][environment] Project root = /home/savickij_ivan/RiderProjects/inferback/inferback
-[81079][environment] INFER_ARGS =   
-[81079][environment] command line arguments:   infer-run -- javac
-[81079][environment]                           /home/savickij_ivan/Projects/java/infer2.java
-[81079][environment] Available memory at startup: 1631 MB
-[81079][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
-[81079][environment] Scheduler: file
-[81079][environment] Cores used: 2
-[81079][environment] Infer version v1.1.0-unknown
-[81079][environment] Copyright 2009 - present Facebook. All Rights Reserved.
-[81079][environment] 
-[81079][   progress] Capturing in javac mode...
-[81079][      debug] Current working directory: '/home/savickij_ivan/RiderProjects/inferback/inferback'
-[81079][      debug] Trying to execute: javac '-J-Duser.language=en' '@/home/savickij_ivan/RiderProjects/inferback/inferback/infer-out/tmp/javac_args.tmp.e25da5' 2>'/home/savickij_ivan/RiderProjects/inferback/inferback/infer-out/tmp/javac.tmp.d327db.out'
-[81079][      debug] *** Success. Logs:
-[81079][      debug] Translating 1 source files (0 classes)
-[81079][      debug] done capturing all files
-[81079][      debug] GC stats for capture:
-[81079][      debug]   minor_words: 1.57304e+06
-[81079][      debug]   promoted_words: 363142
-[81079][      debug]   major_words: 378202
-[81079][      debug]   minor_collections: 2
-[81079][      debug]   major_collections: 0
-[81079][      debug]   compactions: 0
-[81079][      debug]   top_heap_words: 1157632
-[81079][      debug]   
-[81079][environment] Parallel jobs: 2
-[81079][   progress] Found 1 source file to analyze in /home/savickij_ivan/RiderProjects/inferback/inferback/infer-out
-[81110][   progress] /home/savickij_ivan/Projects/java/infer2.java starting
-[81110][   progress] /home/savickij_ivan/Projects/java/infer2.java DONE
-[81079][      debug] Backend stats:
-[81079][      debug]   summary_file_try_load= 0
-[81079][      debug]   summary_read_from_disk= 0
-[81079][      debug]   summary_cache_hits= 0 (N/A%%)
-[81079][      debug]   summary_cache_misses= 0
-[81079][      debug]   ondemand_procs_analyzed= 0
-[81079][      debug]   ondemand_local_cache_hits= 0 (N/A%%)
-[81079][      debug]   ondemand_local_cache_misses= 0
-[81079][      debug]   proc_locker_lock_time_user= 0.00000000
-[81079][      debug]   proc_locker_lock_time_sys= 0.00000000
-[81079][      debug]   proc_locker_lock_time_wall= 0.00000000
-[81079][      debug]   proc_locker_unlock_time_user= 0.00000000
-[81079][      debug]   proc_locker_unlock_time_sys= 0.00000000
-[81079][      debug]   proc_locker_unlock_time_wall= 0.00000000
-[81079][      debug]   restart_scheduler_useful_time_user= 0.00000000
-[81079][      debug]   restart_scheduler_useful_time_sys= 0.00000000
-[81079][      debug]   restart_scheduler_useful_time_wall= 0.00000000
-[81079][      debug]   restart_scheduler_total_time_user= 0.00000000
-[81079][      debug]   restart_scheduler_total_time_sys= 0.00000000
-[81079][      debug]   restart_scheduler_total_time_wall= 0.00000000
-[81079][      debug]   
-[81079][      debug] GC stats for backend_stats.gc_stats_add.:
-[81079][      debug]   minor_words: 574
-[81079][      debug]   promoted_words: 0
-[81079][      debug]   major_words: 0
-[81079][      debug]   minor_collections: 0
-[81079][      debug]   major_collections: 0
-[81079][      debug]   compactions: 0
-[81079][      debug]   top_heap_words: 2315264
-[81079][      debug]   
-[81079][      debug] GC stats for backend_stats.gc_stats_max.:
-[81079][      debug]   minor_words: 512
-[81079][      debug]   promoted_words: 0
-[81079][      debug]   major_words: 0
-[81079][      debug]   minor_collections: 0
-[81079][      debug]   major_collections: 0
-[81079][      debug]   compactions: 0
-[81079][      debug]   top_heap_words: 1157632
-[81079][      debug]   
-[81079][      debug] Average over 2 processes
-[81079][      debug] GC stats for backend_stats.gc_stats_average.:
-[81079][      debug]   minor_words: 287
-[81079][      debug]   promoted_words: 0
-[81079][      debug]   major_words: 0
-[81079][      debug]   minor_collections: 0
-[81079][      debug]   major_collections: 0
-[81079][      debug]   compactions: 0
-[81079][      debug]   top_heap_words: 1157632
-[81079][      debug]   
-[81079][      debug] Analysis phase finished in 71.415ms
-[81079][      debug] backend_stats.scheduler_process_analysis_time_user= 0.01852100
-[81079][      debug] backend_stats.scheduler_process_analysis_time_sys= 0.01895000
-[81079][      debug] backend_stats.scheduler_process_analysis_time_wall= 0.07141529
-[81079][      debug] GC stats for analysis_scheduler:
-[81079][      debug]   minor_words: 78025
-[81079][      debug]   promoted_words: 42936
-[81079][      debug]   major_words: 51642
-[81079][      debug]   minor_collections: 1
-[81079][      debug]   major_collections: 2
-[81079][      debug]   compactions: 1
-[81079][      debug]   top_heap_words: 1157632
-[81079][      debug]   
-[81083][      debug] Sqlite write daemon: terminating
+[94616][      debug] Loading models took 214ms
+[94617][      debug] Sqlite write daemon: starting up
+[94617][      debug] Sqlite write daemon: set up complete, waiting for connections
+[94616][environment] CWD = /home/savickij_ivan/RiderProjects/inferback/inferback
+[94616][environment] No .inferconfig file found
+[94616][environment] Project root = /home/savickij_ivan/RiderProjects/inferback/inferback
+[94616][environment] INFER_ARGS =   
+[94616][environment] command line arguments:   infer-run -- javac
+[94616][environment]                           /home/savickij_ivan/Projects/java/infer.java
+[94616][environment] Available memory at startup: 1259 MB
+[94616][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[94616][environment] Scheduler: file
+[94616][environment] Cores used: 2
+[94616][environment] Infer version v1.1.0-unknown
+[94616][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[94616][environment] 
+[94616][   progress] Capturing in javac mode...
+[94616][      debug] Current working directory: '/home/savickij_ivan/RiderProjects/inferback/inferback'
+[94616][      debug] Trying to execute: javac '-J-Duser.language=en' '@/home/savickij_ivan/RiderProjects/inferback/inferback/infer-out/tmp/javac_args.tmp.333946' 2>'/home/savickij_ivan/RiderProjects/inferback/inferback/infer-out/tmp/javac.tmp.90222c.out'
+[94616][      debug] *** Success. Logs:
+[94616][      debug] Translating 1 source files (2 classes)
+[94616][      debug] done capturing all files
+[94616][      debug] GC stats for capture:
+[94616][      debug]   minor_words: 1.73096e+06
+[94616][      debug]   promoted_words: 363142
+[94616][      debug]   major_words: 378202
+[94616][      debug]   minor_collections: 2
+[94616][      debug]   major_collections: 0
+[94616][      debug]   compactions: 0
+[94616][      debug]   top_heap_words: 1157632
+[94616][      debug]   
+[94616][environment] Parallel jobs: 2
+[94616][   progress] Found 1 source file to analyze in /home/savickij_ivan/RiderProjects/inferback/inferback/infer-out
+[94642][   progress] /home/savickij_ivan/Projects/java/infer.java starting
+[94642][   progress] /home/savickij_ivan/Projects/java/infer.java DONE
+[94616][      debug] Backend stats:
+[94616][      debug]   summary_file_try_load= 14
+[94616][      debug]   summary_read_from_disk= 0
+[94616][      debug]   summary_cache_hits= 68 (82%)
+[94616][      debug]   summary_cache_misses= 14
+[94616][      debug]   ondemand_procs_analyzed= 4
+[94616][      debug]   ondemand_local_cache_hits= 20 (71%)
+[94616][      debug]   ondemand_local_cache_misses= 8
+[94616][      debug]   proc_locker_lock_time_user= 0.00000000
+[94616][      debug]   proc_locker_lock_time_sys= 0.00000000
+[94616][      debug]   proc_locker_lock_time_wall= 0.00000000
+[94616][      debug]   proc_locker_unlock_time_user= 0.00000000
+[94616][      debug]   proc_locker_unlock_time_sys= 0.00000000
+[94616][      debug]   proc_locker_unlock_time_wall= 0.00000000
+[94616][      debug]   restart_scheduler_useful_time_user= 0.00000000
+[94616][      debug]   restart_scheduler_useful_time_sys= 0.00000000
+[94616][      debug]   restart_scheduler_useful_time_wall= 0.00000000
+[94616][      debug]   restart_scheduler_total_time_user= 0.00000000
+[94616][      debug]   restart_scheduler_total_time_sys= 0.00000000
+[94616][      debug]   restart_scheduler_total_time_wall= 0.00000000
+[94616][      debug]   
+[94616][      debug] GC stats for backend_stats.gc_stats_add.:
+[94616][      debug]   minor_words: 738749
+[94616][      debug]   promoted_words: 63028
+[94616][      debug]   major_words: 66408
+[94616][      debug]   minor_collections: 1
+[94616][      debug]   major_collections: 0
+[94616][      debug]   compactions: 0
+[94616][      debug]   top_heap_words: 2315264
+[94616][      debug]   
+[94616][      debug] GC stats for backend_stats.gc_stats_max.:
+[94616][      debug]   minor_words: 738687
+[94616][      debug]   promoted_words: 63028
+[94616][      debug]   major_words: 66408
+[94616][      debug]   minor_collections: 1
+[94616][      debug]   major_collections: 0
+[94616][      debug]   compactions: 0
+[94616][      debug]   top_heap_words: 1157632
+[94616][      debug]   
+[94616][      debug] Average over 2 processes
+[94616][      debug] GC stats for backend_stats.gc_stats_average.:
+[94616][      debug]   minor_words: 369374
+[94616][      debug]   promoted_words: 31514
+[94616][      debug]   major_words: 33204
+[94616][      debug]   minor_collections: 0
+[94616][      debug]   major_collections: 0
+[94616][      debug]   compactions: 0
+[94616][      debug]   top_heap_words: 1157632
+[94616][      debug]   
+[94616][      debug] Analysis phase finished in 53.91ms
+[94616][      debug] backend_stats.scheduler_process_analysis_time_user= 0.02589600
+[94616][      debug] backend_stats.scheduler_process_analysis_time_sys= 0.00968800
+[94616][      debug] backend_stats.scheduler_process_analysis_time_wall= 0.05390955
+[94616][      debug] GC stats for analysis_scheduler:
+[94616][      debug]   minor_words: 185588
+[94616][      debug]   promoted_words: 59577
+[94616][      debug]   major_words: 68283
+[94616][      debug]   minor_collections: 1
+[94616][      debug]   major_collections: 2
+[94616][      debug]   compactions: 1
+[94616][      debug]   top_heap_words: 1157632
+[94616][      debug]   
+[94616][      debug] GC stats for report:
+[94616][      debug]   minor_words: 29921
+[94616][      debug]   promoted_words: 0
+[94616][      debug]   major_words: 0
+[94616][      debug]   minor_collections: 0
+[94616][      debug]   major_collections: 0
+[94616][      debug]   compactions: 0
+[94616][      debug]   top_heap_words: 1157632
+[94616][      debug]   
+[94616][      debug] GC stats for main_process_full:
+[94616][      debug]   minor_words: 3.76346e+06
+[94616][      debug]   promoted_words: 597169
+[94616][      debug]   major_words: 1.14851e+06
+[94616][      debug]   minor_collections: 14
+[94616][      debug]   major_collections: 5
+[94616][      debug]   compactions: 2
+[94616][      debug]   top_heap_words: 1157632
+[94616][      debug]   
+[94617][      debug] Sqlite write daemon: terminating
+
+[94661][      phase] ============================================================
+[94661][      phase] = New infer execution begins
+[94661][      phase] ============================================================
+[94662][      debug] Sqlite write daemon: starting up
+[94662][      debug] Sqlite write daemon: set up complete, waiting for connections
+[94661][      phase] ============================================================
+[94661][      phase] = New infer execution begins
+[94661][      phase] ============================================================
+[94661][environment] CWD = /home/savickij_ivan/RiderProjects/inferback/inferback
+[94661][environment] No .inferconfig file found
+[94661][environment] Project root = /home/savickij_ivan/RiderProjects/inferback/inferback
+[94661][environment] INFER_ARGS =   @/tmp/args.tmp.cc6e11
+[94661][environment] command line arguments:   infer-reportdiff --report-current
+[94661][environment]                           /home/savickij_ivan/RiderProjects/inferback/inferback/infer-out/report.json
+[94661][environment]                           --report-previous
+[94661][environment]                           /home/savickij_ivan/RiderProjects/inferback/previous.json
+[94661][environment] Available memory at startup: 1261 MB
+[94661][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[94662][      debug] Sqlite write daemon: terminating
+[94661][environment] Scheduler: file
+[94661][environment] Cores used: 2
+[94661][environment] 
+[94685][      phase] ============================================================
+[94685][      phase] = New infer execution begins
+[94685][      phase] ============================================================
+[94686][      debug] Sqlite write daemon: starting up
+[94686][      debug] Sqlite write daemon: set up complete, waiting for connections
+[94685][      phase] ============================================================
+[94685][      phase] = New infer execution begins
+[94685][      phase] ============================================================
+[94685][environment] CWD = /home/savickij_ivan/RiderProjects/inferback/inferback
+[94685][environment] No .inferconfig file found
+[94685][environment] Project root = /home/savickij_ivan/RiderProjects/inferback/inferback
+[94685][environment] INFER_ARGS =   @/tmp/args.tmp.220612
+[94685][environment] command line arguments:   infer-reportdiff --report-current
+[94685][environment]                           /home/savickij_ivan/RiderProjects/inferback/inferback/infer-out/report.json
+[94685][environment]                           --report-previous
+[94685][environment]                           /home/savickij_ivan/RiderProjects/inferback/previous.json
+[94685][environment]                           --cost
+[94685][environment] Available memory at startup: 1265 MB
+[94685][environment] Active checkers: self-in-block (C/C++/ObjC), bufferoverrun-analysis (C/C++/ObjC, Java), purity-analysis (C/C++/ObjC, Java), starvation (C/C++/ObjC, Java), cost (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[94686][      debug] Sqlite write daemon: terminating
+[94685][environment] Scheduler: file
+[94685][environment] Cores used: 2
+[94685][environment] 
+[94715][      phase] ============================================================
+[94715][      phase] = New infer execution begins
+[94715][      phase] ============================================================
+[94716][      debug] Sqlite write daemon: starting up
+[94716][      debug] Sqlite write daemon: set up complete, waiting for connections
+[94715][      phase] ============================================================
+[94715][      phase] = New infer execution begins
+[94715][      phase] ============================================================
+[94715][environment] CWD = /home/savickij_ivan/RiderProjects/inferback/inferback
+[94715][environment] No .inferconfig file found
+[94715][environment] Project root = /home/savickij_ivan/RiderProjects/inferback/inferback
+[94715][environment] INFER_ARGS =   @/tmp/args.tmp.196956
+[94715][environment] command line arguments:   infer-reportdiff --report-current
+[94715][environment]                           /home/savickij_ivan/RiderProjects/inferback/inferback/infer-out/report.json
+[94715][environment]                           --report-previous
+[94715][environment]                           /home/savickij_ivan/RiderProjects/inferback/previous.json
+[94715][environment]                           --pulse
+[94715][environment] Available memory at startup: 1251 MB
+[94715][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), pulse (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[94716][      debug] Sqlite write daemon: terminating
+[94715][environment] Scheduler: file
+[94715][environment] Cores used: 2
+[94715][environment] 
