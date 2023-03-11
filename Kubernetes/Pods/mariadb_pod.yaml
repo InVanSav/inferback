@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: mariadb_pod
+    labels:
+        name: mariadb_pod
+        app: inferback
+spec:
+    containers:
+        - name: mariadb
+          image: mariadb
+          ports:
+              - containerPort: 3306
+          env:
+              - name: MARIADB_ROOT_PASSWORD
+                value: guitarist097865
+              - name: MARIADB_USER
+                value: inferback
+              - name: MARIADB_PASSWORD
+                value: inferback
+              - name: MARIADB_DATABASE
+                value: inferback

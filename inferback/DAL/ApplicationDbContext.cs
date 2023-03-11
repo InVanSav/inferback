@@ -4,7 +4,9 @@ using Microsoft.EntityFrameworkCore;
 namespace inferback.DAL;
 
 public class ApplicationDbContext : DbContext {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) {
+        Database.Migrate();
+    }
 
     public DbSet<Project> Projects { get; set; }
 

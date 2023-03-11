@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: inferback_api_pod
+    labels:
+        name: inferback_api_pod
+        app: inferback
+spec:
+    containers:
+        - name: inferback_api
+          image: vanish3842sova/inferback-api
+          ports:
+              - containerPort: 5000

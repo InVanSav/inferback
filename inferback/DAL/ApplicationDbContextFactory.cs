@@ -8,7 +8,7 @@ public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<Applicati
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
 
         var connection =
-            "server=localhost;port=3306;user=inferback;password=inferback;database=inferback";
+            "server=db;port=3306;user=inferback;password=inferback;database=inferback";
 
         optionsBuilder.UseMySql(connection,
             new MariaDbServerVersion(new Version(10, 9, 5)));

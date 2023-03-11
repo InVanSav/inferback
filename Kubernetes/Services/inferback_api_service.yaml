@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+    - name: inferback_service
+      labels:
+            name: inferback_service
+            app: inferback
+spec:
+    type: NodePort
+    ports:
+        - port: 5000
+          targetPort: 5000
+          nodePort: 5000
+    selector:
+        name: inferback_api_pod
+        app: inferback

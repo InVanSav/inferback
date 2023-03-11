@@ -12,8 +12,7 @@ services:
       - MARIADB_PASSWORD=inferback
       - MARIADB_DATABASE=inferback
     volumes:
-      - /devel/mysql/data:/var/lib/mysql/data
-      - ~/sql_scripts/create_tables.sql:/docker-entrypoint-initdb.d
+      - .:/var/lib/mysql/data
   api:
     build:
       context: .
